@@ -54,3 +54,28 @@
     // Q-> Is js dynamically type or statically type language
     // A language is dynamically typed if the type is associated with run-time values, and not named variables/fields/etc.
 
+
+    / *  stack and heap 
+
+// stack (primitive)  , heap (non-primitive ) 
+
+let myName = "NavpreetSingh.com"
+let anotherName= myName
+
+anotherName = "navy"
+
+console.log(anotherName);
+console.log(myName);
+
+// heap 
+
+let userOne = {
+    email : "Navy@gmail.com",
+    upi : "user@ybl"
+}
+let userTwo = userOne
+userTwo.email = "NewMail@gmail.com"
+
+console.log(userOne.email)
+console.log(userTwo.email)
+
