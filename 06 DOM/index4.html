@@ -1,0 +1,75 @@
+<!-- *remove abd edit element in DOM -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code</title>
+    <style>
+        body{
+
+    background-color: black;
+    color: white;
+        }
+
+    </style>
+</head>
+
+<body>
+    <ul class="language">
+        <li>
+            javascript
+        </li>
+    </ul>
+
+</body>
+    <script>
+        // * this is not optimized 
+        function addLang(langName){
+           const li =  document.createElement('li');
+           li.innerHTML =`${langName}`
+
+        //    attachment with language class 
+        document.querySelector('.language').appendChild(li)
+        }
+        // addLang('Python')
+        // addLang('Typescript')
+
+        // optimized way 
+        function addOptimiLanguage(langName){
+            const li = document.createElement('li')
+            // created a new text node and appended in the li element
+            li.appendChild(document.createTextNode(langName))
+
+            document.querySelector('.language').appendChild(li)
+        }
+        addOptimiLanguage("Python")
+        addOptimiLanguage("Typescript")
+
+        // Edit 
+        const secondLang = document.querySelector("li:nth-child(2)")
+        // secondLang.innerHTML = "Mojo"
+
+        // another approch 
+        const newli = document.createElement('li')
+        newli.textContent="Mojo"
+        secondLang.replaceWith(newli)
+
+        // replacing first element 
+        // const firstElem = document.querySelector("li:nth-child(1)")
+
+        // const newLi2 = document.createElement('li')
+        // newLi2.textContent = "Typescript"
+        // firstElem.replaceWith(newLi2)
+
+        const firstElem = document.querySelector("li:first-child")
+        firstElem.outerHTML = "<li> Typescript </li>" 
+        
+        // remove 
+
+        const lastLang = document.querySelector('li:last-child')
+        lastLang.remove()
+
+    </script>
+</html>
