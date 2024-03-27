@@ -11,7 +11,6 @@
         Color Schema Swicher
     </h1>
     <div class="Container">
-        
         <div class="boxes" id="grey"></div>
         <div class="boxes" id="white"></div>
         <div class="boxes" id="blue"></div>
