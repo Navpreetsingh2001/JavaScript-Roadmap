@@ -1,0 +1,38 @@
+.Container{
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+    
+}
+#heading{
+    text-align: center;
+}
+#heading2{
+    text-align: center;
+    /* width: 70%; */
+    margin: 30px;
+    /* border: 2px solid red; */
+    align-items: center;
+}
+.boxes{
+    border: 2px solid rgb(37, 32, 32);
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+
+}
+#grey{
+    background-color: grey;
+}
+#white{
+    background-color: white;
+}
+#yellow{
+    background-color: yellow;
+}
+#blue{
+    background-color: blue;
+}
