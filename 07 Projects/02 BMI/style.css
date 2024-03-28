@@ -1,0 +1,53 @@
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Container{
+    height: 70vh;
+    width: 25%;
+    border: 1px solid grey;
+    border-radius: 5px;
+    background-color: rgb(241, 223, 200);
+    
+}
+.inp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid red; */
+}
+input{
+    margin: 10px ;
+    padding: 10px;
+    
+}
+#heading{
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+}
+
+
+#btnCal{
+    padding: 10px;
+    width: 80%;
+    margin: auto;
+    background-color: grey;
+    color: white;
+    font-size: 1.3rem;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    margin-top: 20px;
+    cursor: pointer;
+    display: flex;
+}
+.result{
+    /* border: 2px solid red; */
+    display: flex;
+    height: 40px;
+    justify-content: center;
+}
