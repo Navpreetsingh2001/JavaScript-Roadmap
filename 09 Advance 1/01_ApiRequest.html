@@ -21,17 +21,29 @@
 </body>
 <script>
 
-const myApi = 'https://api.github.com/users/navpreetsingh2001'
-const xhr = new XMLHttpRequest();
-xhr.open('GET' , myApi);
-xhr.onreadystatechange =function(){
-    if(xhr.readyState ===4){
+// API endpoint for a GitHub user's data
+const myApi = 'https://api.github.com/users/navpreetsingh2001';
 
+// Create a new XMLHttpRequest object
+const xhr = new XMLHttpRequest();
+
+// Initialize a GET request to the API endpoint
+xhr.open('GET', myApi);
+
+// Define what happens on state changes
+xhr.onreadystatechange = function() {
+    // Check if the request is complete
+    if (xhr.readyState === 4) {
+        // Parse the JSON response
         const data = JSON.parse(this.responseText);
-        console.log(data.followers)
+        // Log the number of followers to the console
+        console.log(data.followers);
     }
-    }
+};
+
+// Send the request
 xhr.send();
+
 
 
 </script>
