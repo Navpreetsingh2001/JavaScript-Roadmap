@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async</title>
+</head>
+<body>
+    <h1>This is content.</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // setTimeout 
+    const sayName = function(){
+        console.log(`my name is Navy`)
+    }
+    setTimeout(sayName,2000)
+    
+
+    // setInterval
+
+    // setInterval(function(){
+    //     alert("hello")
+    // },2000)
+
+    // button 
+    document.getElementById('stop').addEventListener('click',function(){
+        clearTimeout(sayName)
+        console.log("Stopped");
+    })
+</script>
+</html>
