@@ -10,6 +10,14 @@
         color: white;
         background-color: #414141;
     }
+    #conatiner{
+        border: 2px solid red;
+        height: 300px;
+    }
+    #img{
+        height: 300px;
+        width: 300px;
+    }
 </style>
 <body>
     <!-- Value	State	Description
@@ -18,6 +26,11 @@
 2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
 3	LOADING	Downloading; responseText holds partial data.
 4	DONE	The operation is complete. -->
+    <div id="conatiner">
+    <img id="img" src="" alt="">
+    <h2 id="followers">sffbfdb</h2>
+    <button id="btn">fetch</button>
+</div>
 </body>
 <script>
 
@@ -37,7 +50,12 @@ xhr.onreadystatechange = function() {
         // Parse the JSON response
         const data = JSON.parse(this.responseText);
         // Log the number of followers to the console
-        console.log(data.followers);
+        // console.log(data.followers);
+         btn.addEventListener("click",function(){
+        
+            img.setAttribute("src",`${data.avatar_url}`)
+            foll.textContent =`${data.followers}`
+        })
     }
 };
 
